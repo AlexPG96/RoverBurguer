@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rovers.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+
+            <div class="nav_top">
+                <div class="container row">
+                    <div>
+                        <a href="mailto:rovers@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>rovers@gmail.com</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="tel:+91 555 55 55">
+                            <i class="fas fa-phone"></i>
+                            <span>91 555 55 55</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a id="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Shopping Cart</span>
+                            <sup id="cart-count"></sup>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../index.html" class="login">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="accountName">Account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="container row">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.jpg" alt="logo-hamburgueseria">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="../auth/index.html">Orders</a></li>
+                        <li><a href="../auth/payments.html">Payments</a></li>
+                        <li><a href="#">Prime</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a onclick="logout('user')">Logout</a></li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+
+        </header>
+
+        <main>
+            <section id="myOrders">
+                <h2 class="white">Your<span>Orders</span></h2>
+                <div class="underline">
+                    <hr noshade="noshade">
+                    <span>X</span>
+                </div>
+                <div class="container_menu">
+                    <div class="left_column">
+                        <div class="encabezado_menu">
+                            <div class="nav_list">
+                                <ul>
+                                    <li><a class="active" href="#">Last month</a></li>
+                                    <li><a href="#">April</a></li>
+                                    <li><a href="#">March</a></li>
+                                    <li><a href="#">February</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_column">
+                        <div id="my-orders-content" class="products"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="container-fluid">
+            <div class="container">
+                <p>Copyright &copy; 2020 - <a href="#">Legal notice</a> - <a href="#">Cookies</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="modal-container">
+        <div id="loginModal" class="loginModal">
+            <h2>Login</h2>
+            <form>
+            <div class="field">
+                <input type="email" placeholder="Enter your email address">
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Enter your password">
+            </div>
+            <div class="field">    
+                <a class="button" onclick="authUser()">Login</a>
+            </div>
+
+            <div class="field">
+                <a class="register" href="#">Or register</a>
+            </div>
+
+
+            </form>
+            <button id="close-loginModal">&times;</button>
+        </div>
+    </div>
+
+    <div id="cart-drawer">
+        <div id="cart-header">
+          <h2>Shopping Cart</h2>
+          <button id="cart-close">&times;</button>
+        </div>
+        <div id="cart-content"></div>
+        <div id="cart-footer"></div>
+          <div class="checkoutButtons">
+            <a class="button" onclick="closeCartDrawer()">Close</a>
+            <a class="button" >Checkout</a>
+          </div>
+      </div>
+
+      <script src="../js/events.js"></script>
+      <script src="../js/auth.js"></script>
+
+</body>
+
+</html>

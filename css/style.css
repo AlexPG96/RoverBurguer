@@ -1,0 +1,1044 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Handlee', cursive;
+color primario: #fa573a;
+color secundario: #21242e;
+--breakpoint-movil: 26.563em;
+--breakpoint-tablet: 48.000em;
+--breakpoint-desktop: 62.750em;
+
+*/
+
+:root {
+    --accent-color: #fa573a;
+    --secondary-color: #21242e;
+    --max-width: 1100px;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Handlee', cursive;
+
+}
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*inicio header*/
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+header .nav_top {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    height: 60px;
+}
+
+.row{
+    display: flex;
+}
+
+header .nav_top a{
+    color: white;
+    text-decoration: none;
+    font-size: 120%;
+
+}
+
+header .nav_top a.login {
+    cursor: pointer;    
+}
+
+header .nav_top span{
+    display: none;
+}
+
+header .nav_top .row{
+    justify-content: space-between;
+}
+
+header .nav_top .row div{
+    padding: 0 10px;
+}
+
+/*OTRA MANERA DE SOLUCIONAR LA POSICION DE LOS ICONOS
+header .nav_top .row div {
+    width: 100%;
+    text-align: center;
+}*/
+
+header .nav_top i {
+    color: var(--accent-color);
+}
+
+header nav{
+    padding: 20px;
+}
+
+header .logo{
+    width: 30%;
+    margin-right: 60%;
+
+}
+
+header .logo img{
+    max-width: 150px;
+}
+
+header .menu{
+    cursor: pointer;
+    width: 10%;
+    
+}
+
+header .menu div {
+    border-top: 2px solid #aaa;
+    margin: 0.625em;
+    width: 1.875em;
+}
+
+header nav .row{
+    flex-wrap: wrap;
+}
+
+/*OTRA SOLUCION PARA LA HAMBURGUESA CON FLEX
+
+header .menu {
+    cursor: pointer;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header .menu div {
+    border-top: 2px solid #aaa;
+    margin: 0.35em;
+    width: 1.875em;
+}
+
+*/
+
+header nav ul{
+    width: 100%;
+}
+
+
+header nav ul li a{
+    display: block;
+    padding: 1.250em;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+    color: #aaa;
+
+}
+
+header nav ul li a:hover{
+    color: var(--accent-color);
+}
+
+
+header nav ul li .active{
+    color: var(--accent-color);
+}
+
+@media(min-width: 48.000em){
+    header .nav_top span{
+        display: inline;
+    }
+}
+
+@media(min-width:62.750em){
+    header .menu{
+        display: none;
+    }
+
+    header .logo{
+        width: 50%;
+        margin-right: 0;
+    }
+
+    header nav ul {
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    header nav ul li{
+        width: 60%;
+    }
+
+    header nav ul li a{
+        padding: 0.8em 0;
+        text-align: center;
+        border-bottom: 0px;
+    }
+}
+
+/*inicio hero*/
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    height: 35em;
+    background-size: cover;
+    background-position: center;
+    background-color: #777777;
+    background-blend-mode: multiply;
+    /*EJEMPLO PARA EL FLEX*/
+    display: flex;
+    
+}
+
+/*EJEMPLO CON FLEX*/
+.hero>div {
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+
+}
+/*ejemplo sin flex
+.hero>div{
+    padding: 15% 3%;
+*/
+
+
+.hero h1{
+    font-size: 2.5em;
+    font-family: var(--secondary-font);
+    color: white;
+}
+
+.hero h2{
+    color: var(--accent-color);
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+.hero p{
+    font-size: 1.15em;
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    padding: 1.15em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    margin: 1em 0;
+    border-radius: 6px;
+    width: 165px;
+    text-align: center;
+}
+/*Para mover la flecha de ida y de vuelta*/
+.button i{
+    transition: transform 0.5s;
+}
+
+.button:hover{
+    background-color: transparent;
+    color: var(--accent-color);
+}
+/*para mover la flecha d0.5e ida y de vuelta*/
+.button:hover i{
+    transform: translateX(5px);
+}
+
+.hero .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 165px;
+}
+
+.hero .social li{
+    display: inline-block;
+    font-size: 2em;
+}
+
+.hero .social a {
+    color: white;
+}
+
+.hero .social a:hover {
+    color: var(--accent-color);
+    transition: .5s;
+}
+
+/*Inicio Main section ourservices*/
+
+main section {
+    padding: 2.125em 0;
+
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--accent-color);
+
+}
+
+main section .underline{
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+main section .underline hr{
+    border-color: var(--accent-color);
+    position: absolute;
+    top: -0.126em;
+    width: 100%;
+    
+}
+
+main section .underline span{
+    text-align: center;
+    display: block;
+}
+
+main section .row{
+    flex-wrap: wrap;
+    padding: 0 0.825em;
+}
+
+main section .row article{
+    width: 100%;
+    padding: 1.825em 0;
+    border-bottom: 1px solid #aaa;
+}
+
+main section article div i{
+    color: var(--accent-color);
+    font-size: 2em;
+    padding: 0.8rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+}
+
+.services{
+    margin: 1rem 0;
+}
+
+main section article .fa-truck{
+    transform: rotateY(180deg);
+}
+
+main section article h3{
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.enlace{
+    text-decoration: none;
+    color: var(--accent-color);
+    margin-top: 1em;
+    display: block;
+}
+
+@media(min-width: 48.000em){
+    main section .row article{
+        width: 50%;
+        padding: 1.825em 0.825em;
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        margin-bottom: 1em;
+    }
+    main section .row article:nth-child(3){
+        width: 100%;
+    }
+}
+
+@media(min-width: 62.750em){
+    main section .row article{
+        width: 33.33%;
+    
+    }
+    main section .row article:nth-child(3){
+        width: 33.33%;
+    }
+
+}
+
+/*Main section about us*/
+
+main section .row .columna{
+    border: 0;
+}
+
+main section .row .columna h4{
+    margin-bottom: 1em;
+    color: var(--accent-color);
+}
+
+main section .marco {
+    border: 3px solid var(--accent-color);
+    transform: rotateZ(10deg);
+    transition: 0.5s;
+    width: 85%;
+    margin: 0 auto;
+}
+
+main section .marco img{
+    transform: rotateZ(-10deg);
+    transition: 0.5s;
+}
+
+main section .columna:hover .marco, main section .columna:hover img{
+    transform: rotateZ(0deg);
+
+}
+
+
+@media(min-width: 48.000em){
+
+    main section .row .columna{
+        width: 50%;
+    }
+
+}
+
+/*inicio footer*/
+
+footer{
+    background-color: var(--secondary-color);
+    padding: 1.825em 0;
+    text-align: center;
+    
+}
+
+footer p, footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+@media(min-width: 48.000em){
+    footer{
+        text-align: left;
+    }
+}
+
+
+/*Inicio seccion BLOG*/
+
+/*ME VAS A TIRAR DE LAS OREJAS POR NO DECIR DE OTRO SITIO PERO NO ME SALEN LAS COLUMNAS*/
+
+.contenedor_blog{
+    max-width: 40%;
+    margin: 0 auto;
+
+}
+
+
+
+main section .entrada_blog .imagen{
+    margin: 0 auto;
+    width: 300px;
+    position: relative;
+    display: flex;
+
+    
+}
+
+main section .entrada_blog .fecha {
+   background-color: rgba(250, 87, 58, 0.8);
+   text-align: center;
+   padding: 0.625em;
+   width: 3.125em;
+   height: 3.125em;
+   position: relative;
+   top: -12.480em;
+
+
+}  
+
+main section .entrada_blog .fecha p{
+    font-weight: 700;
+    color: white;
+    
+}
+
+main .column{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    
+    
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .column article{
+    padding: 0 0.825em;
+
+    
+}
+
+main section div .entrada_blog {
+  width: 300px;
+
+}
+    
+
+main .column article h4{
+    margin-bottom: 1em;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+hr {
+    background: var(--accent-color);
+}
+
+
+@media(min-width: 62.750em){
+    .flex{
+        flex-wrap: nowrap;
+    }
+
+    .contenedor_blog{
+        max-width: 100%;
+        margin: 0;
+    
+    }
+
+    main .contenedor_blog .entrada_blog{
+        padding: 0 ;
+     }
+    
+   
+}
+
+
+
+/*INICIO SECCION MENU*/
+
+main #menu {
+    background-color: var(--secondary-color);
+}
+
+main #menu .container_menu {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+}
+
+main #menu .container_menu .left_column {
+    width: 20%;
+}
+
+main #menu .container_menu .right_column {
+    width: 80%;
+}
+
+.white {
+    color: white;
+}
+
+main section h3 {
+    font-weight: 700;
+    font-size: 1.750em;
+}
+
+.flex{
+    display: flex;
+}
+
+.order_now{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.order_now i{
+    transform: translateY(0.2em);
+    border: 0;
+}
+
+.order_now:hover{
+    background-color: transparent;
+    color: var(--accent-color);
+}
+/*para mover la flecha de ida y de vuelta*/
+.order_now:hover{
+    transform: translateX(0.2em);
+   
+}
+
+main section p.price{
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.75em;
+    
+}
+
+
+
+section .container_menu .left_column .nav_list ul {
+    width: 100%;
+}
+
+
+section .container_menu .left_column .nav_list ul li a{
+    display: block;
+    padding: 1.250em;
+    text-align: left;
+    text-decoration: none;
+    color: white
+
+}
+
+section .container_menu .left_column .nav_list ul li a:hover{
+    color: var(--accent-color);
+}
+
+section .container_menu .left_column .nav_list ul li a.active:hover{
+    color: var(--secondary-color);
+}
+
+
+section .container_menu .left_column .nav_list ul li a.active{
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.today_hot_offers{
+    margin: 5em 0;
+
+}
+
+.todayoffers {
+    border-color: var(--accent-color);
+    width: 5.500em;
+    margin: 1em 0;
+}
+
+.container_menu .right_column .products {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 80px;
+}
+
+.container_menu .right_column .product {
+    display: flex;
+    align-items: center;
+}
+
+.container_menu .right_column .product img{
+    width: auto;
+    height: 160px;
+    margin-right: 20px;
+    margin: 1em 20px 0 0;
+    border-radius: 6px;
+}
+
+.container_menu .right_column .product .description {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+
+/* @media(min-width: 62.750em){
+    .encabezado_menu {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        height: 30%;
+        position: absolute;
+    }
+
+    .today_hot_offers{
+        margin: 5em 0;
+        
+    }
+   
+
+    .productos{
+        display: inline-block;
+        position: relative;
+        left: 25%;
+        height: 20%;
+        width: 50%;
+        padding-left: 10em;
+
+    }
+
+    .producto{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        
+    }
+
+    .alinear {
+        width: 900px;
+        justify-content: center;
+        position: absolute;
+        left: 25em;
+        margin-top: -2em;
+        
+    }
+
+    .alinear_descripcion{
+        width: 900px;
+        justify-content: center;
+        position: absolute;
+        left: 31.750em;
+        margin-top: 3em;
+    }
+} */
+
+
+/* LOGIN */
+
+/* Estilos para el contenedor del modal */
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+  /* Estilos para el modal */
+#loginModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+  
+/* Estilos para el botón de cerrar */
+#close-loginModal {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.loginModal h2{
+    font-size: 2rem;
+    margin-bottom: 14px;
+}
+
+.loginModal .field {
+    clear: both;
+    margin: 0 0 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.loginModal .field input:placeholder {
+    color: hsla(0,0%,74.9%,.87);
+}
+
+.loginModal .field input {
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+}
+  
+.loginModal .field .register {
+    text-decoration: none;
+    color: #909399;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* SHOPPING CART */
+
+.cartCount {
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: var(--secondary-color);
+    font-size: .8rem;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: -5px;
+}
+
+#cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+#cart-drawer .checkoutButtons {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    padding: 0 10px 10px 10px;
+}
+
+#cart-drawer .checkoutButtons a.button {
+    cursor: pointer;
+    width: 100%;
+    margin: 5px 16px;
+}
+
+#cart-drawer .checkoutButtons a.button:first-child {
+    background-color: transparent !important;
+    color: var(--accent-color) !important;
+}
+  
+#cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #fff;
+    color: var(--accent-color);
+}
+  
+#cart-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    height: 60px;
+    margin-top: 35px;
+}
+  
+#cart-close {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+  
+#cart-close:focus {
+    outline: none;
+}
+  
+#cart-content {
+    padding: 20px;
+    height: 380px;
+    overflow-y: auto;
+}
+
+#cart-content .empty-cart {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#cart-footer {
+    padding: 20px;
+}
+
+#cart-content .product {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cart-content .product .product-image {
+    height: 70px;
+    width: auto;
+    margin: 0 0 1em;
+    border-radius: 6px;
+}
+
+#cart-content .product .product-name {
+    width: 65%;
+    color: #fff;
+}
+
+#cart-content .product .product-price {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+#cart-footer .total-price {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+  
+#cart-toggle {
+    cursor: pointer;
+    display: flex;
+}
+  
+#cart-toggle:focus {
+    outline: none;
+}
+  
+#myOrders {
+    background-color: var(--secondary-color);
+}
+
+#myOrders .container_menu {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+}
+
+#myOrders .container_menu .left_column {
+    width: 20%;
+}
+
+#myOrders .container_menu .right_column {
+    width: 80%;
+}
+   
+
+#myOrders .orderItem {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+
+#myOrders .orderItem .orderSummary{
+    margin-left: 20px;
+    padding-bottom: 20px;
+    color: #aaa;
+}
+
+
+
+
+#payments {
+    background-color: var(--secondary-color);
+}
+
+#payments .container_menu {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+}
+
+#payments .card {
+  width: 400px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.card-number span {
+  display: inline-block;
+}
+
+.visible {
+  color: #ffce00;
+  text-shadow: none;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-info {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+}
+
+.card-logo {
+  /* Estilos para el logotipo de la tarjeta de crédito */
+}

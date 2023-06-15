@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rovers. - Lunch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+
+            <div class="nav_top">
+                <div class="container row">
+                    <div>
+                        <a href="mailto:rovers@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <span>rovers@gmail.com</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="tel:+91 555 55 55">
+                            <i class="fas fa-phone"></i>
+                            <span>91 555 55 55</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a id="cart-toggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Shopping Cart</span>
+                            <sup id="cart-count"></sup>
+                        </a>
+                    </div>
+                    <div>
+                        <a id="open-loginModal" class="login">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="container row">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.jpg" alt="logo-hamburgueseria">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a class="active" href="breakfast.html">Menu</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+
+
+            </nav>
+
+
+        </header>
+        <main>
+            <section id="menu">
+                <h2 class="white">Today's<span>Menu</span></h2>
+                <div class="underline">
+                    <hr noshade="noshade">
+                    <span>X</span>
+                </div>
+                <div class="container_menu">
+                    <div class="left_column">
+                        <div class="encabezado_menu">
+                            <div class="nav_list">
+                                <ul>
+                                    <li><a href="breakfast.html">Breakfast</a></li>
+                                    <li><a class="active" href="lunch.html">Lunch</a></li>
+                                    <li><a href="dinner.html">Dinner</a></li>
+                                    <li><a href="desserts.html">Desserts</a></li>
+                                </ul>
+                            </div>
+                            <div class="today_hot_offers">
+                            <h3 class="white">Today's Hot Offers</h3>
+                            <hr class="todayoffers" noshade="noshade">
+                            <p class="white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, optio.
+                                Corrupti
+                                quibusdam, sint sit
+                                temporibus exercitationem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_column">
+                        <div class="products">
+                            <article class="product">
+                                <img src="../images/t1.jpg" alt="hamburguesa">
+                                <div class="product_info">
+                                    <div class="flex">
+    
+                                        <h3 class="white">Chicken Burger With Cheese and Butter</h3>
+                                        <p class="price">$22</p>
+    
+                                    </div>
+                                    <div class="description">
+                                        <p class="white">Vegetable and chicken burguer with extra butter.</p>
+                                        <a class="order_now" onclick="addProduct('chickenBurger')">
+                                            Order Now<i class="fas fa-long-arrow-alt-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product">
+                                <img src="../images/t2.jpg" alt="Pizza">
+                                <div class="product_info">
+                                    <div class="flex">
+
+                                        <h3 class="white">Hot Pizza With Extra Cheese and Butter</h3>
+                                        <p class="price">$25</p>
+                                    </div>
+                                    <div class="description">
+                                        <p class="white">Not vegetable pizza, with extra cheese and butter.</p>
+                                        <a class="order_now" onclick="addProduct('hotPizza')">
+                                            Order Now<i class="fas fa-long-arrow-alt-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="product">
+                                <img src="../images/t3.jpg" alt="Chicken fries">
+                                <div class="product_info">
+                                    <div class="flex">
+
+                                        <h3 class="white">Chicken fries with Barbacue Sauce</h3>
+                                        <p class="price">$18</p>
+                                    </div>
+                                    <div class="description">
+                                        <p class="white">Chicken fries with tomato and lettuce salad.</p>
+                                        <a class="order_now" onclick="addProduct('chickenFries')">
+                                            Order Now<i class="fas fa-long-arrow-alt-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="container-fluid">
+            <div class="container">
+                <p>Copyright &copy; 2020 - <a href="#">Aviso legal</a> - <a href="#">Cookies</a></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="modal-container">
+        <div id="loginModal" class="loginModal">
+            <h2>Login</h2>
+            <form>
+            <div class="field">
+                <input type="email" placeholder="Enter your email address">
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Enter your password">
+            </div>
+            <div class="field">    
+                <a class="button" onclick="authUser()">Login</a>
+            </div>
+
+            <div class="field">
+                <a class="register" href="#">Or register</a>
+            </div>
+
+
+            </form>
+            <button id="close-loginModal">&times;</button>
+        </div>
+    </div>
+
+    <div id="cart-drawer">
+        <div id="cart-header">
+          <h2>Shopping Cart</h2>
+          <button id="cart-close">&times;</button>
+        </div>
+        <div id="cart-content"></div>
+        <div id="cart-footer"></div>
+          <div class="checkoutButtons">
+            <a class="button" onclick="closeCartDrawer()">Close</a>
+            <a class="button" >Checkout</a>
+          </div>
+      </div>
+
+    <script src="../js/events.js"></script>
+    <script src="../js/auth.js"></script>
+
+</body>
+
+</html>
